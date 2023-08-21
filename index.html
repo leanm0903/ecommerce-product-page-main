@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,30 +15,74 @@
   </style>
 </head>
 <body>
+  <header class="contenedor">
+    <div class="logo-bars">
+      <span class="b-open" onclick="openNav()"><img src="images/icon-menu.svg" alt=""></span>
+      <img src="images/logo.svg" alt="">
+    </div>
+    <div class="cart-perfil">
+      <a href="#"><img src="images/icon-cart.svg" alt="Carrito"></a>
+      <a href="#"><img src="images/image-avatar.png" class="image-perfil" alt="foto-perfil"></a>
+    </div>
+    <div class="carrito">
+      <div class="carrito-titulo">
+        <h2>Cart</h2>
+      </div>
+        <div class="compras">
+          <p>Your cart is empty</p>
+        </div>
+    </div>
+    <nav id="mySidenav" class="sidenav">
+      <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#"></a>
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="images/image-product-1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/image-product-2.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/image-product-3.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="images/image-product-4.jpg" style="width:100%">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+     
+    <div class="info-producto-container">
+      <p class="subtitulo">Sneaker Company</p>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p class="descripcion">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="info-precio">
+        <div class="precio-desc">
+          <span class="precio">$125.00</span>
+          <span class="descuento">50%</span>
+        </div>
+        <span class="precio-old">$250.00</span>
+      </div>
+      <div class="contador">
+        <a href="javascript:void(0);" onclick="previous()"><img src="images/icon-minus.svg" alt=""></a>
+        <span class="cantidad">0</span>
+        <a href="javascript:void(0);" onclick="next()"><img src="images/icon-plus.svg" alt=""></a>
+      </div>
+      <a href="#" class="add-to-cart"><img src="images/cart-shopping-solid.svg" alt="">Add to cart</a>
+    </div>
+  </main>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="index.js"></script>
 </body>
 </html>

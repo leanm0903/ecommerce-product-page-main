@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --naranja:hsl(26, 100%, 55%);
+    --paleOrange:hsl(25, 100%, 94%);
+    --azulOscuro: hsl(220, 13%, 13%);
+    --grisAzuladoOscuro: hsl(219, 9%, 45%);
+    --grisAzulado: hsl(220, 14%, 75%);
+    --grisAzuladoClaro:hsl(223, 64%, 98%);
+}
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+/* HEADER */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+}
+.image-perfil{
+    height: 3rem;
+}
+.logo-bars{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2rem;
+}
+.cart-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+}
+/* Sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 6rem;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.b-open{
+    cursor: pointer;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    font-size: 3.6rem;
+    margin-left: 5rem;
+}
+
+@media screen and (max-height: 375px) {
+    .sidenav {
+        padding-top: 1.5rem;
+    }
+
+    .sidenav a {
+        font-size: 1.8rem;
+    }
+}
+/* CARRITO */
+.carrito{
+    position: absolute;
+    z-index: 0;
+    background-color: #fff;
+    border-radius: 1rem;
+    height: 30%;
+    width: 90%;
+    top:9%;
+}
+.carrito h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 2rem;
+    border-bottom:  1px solid var(--grisAzulado);
+}
+.compras {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* FOTO */
+
+.info-producto-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    
+}
+.subtitulo{
+    text-align: flex-start;
+    color: var(--naranja);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+h1{
+    font-size: 2.6rem;
+}
+.descripcion{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--grisAzuladoOscuro);
+
+}
+.info-precio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.precio-desc{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+.precio{
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+.descuento{
+    color: var(--naranja);
+    background-color:var(--paleOrange);
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: .4rem .6rem;
+    border-radius: .6rem;
+}
+.precio-old{
+    text-decoration: line-through;
+    color: var(--grisAzulado);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.contador{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--grisAzuladoClaro);
+    padding: 1.5rem 0;
+}
+.cantidad{
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+.add-to-cart{
+    background-color: var(--naranja);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+.add-to-cart img{
+    color: #fff;
+    height: 1.5rem;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+.mySlides {
+    display: none;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
