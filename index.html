@@ -21,13 +21,24 @@
       <img src="images/logo.svg" alt="">
     </div>
     <div class="cart-perfil">
-      <a href="#"><img src="images/icon-cart.svg" alt="Carrito"></a>
-      <a href="#"><img src="images/image-avatar.png" class="image-perfil" alt="foto-perfil"></a>
+      <a href="#" id="cart-b"><img src="images/icon-cart.svg" alt="Carrito"></a>
+      <a href="#" ><img src="images/image-avatar.png" class="image-perfil" alt="foto-perfil"></a>
     </div>
-    <div class="carrito">
+    <div id="carrito" class="carrito">
       <div class="carrito-titulo">
         <h2>Cart</h2>
       </div>
+        <div class="prod-in-cart">
+          <div class="container-imagen-cart">
+            <!-- InSERTAR IMAGEN DESDE JS -->
+          </div>
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <div class="detalles">
+            <h3 class="titulo-desc"></h3>
+            <span class="precio-cart"></span>
+            <span class="total">33333</span>
+          </div>
+        </div>
         <div class="compras">
           <p>Your cart is empty</p>
         </div>
@@ -62,24 +73,26 @@
      
     <div class="info-producto-container">
       <p class="subtitulo">Sneaker Company</p>
-      <h1>Fall Limited Edition Sneakers</h1>
+      <h1 class="nombre-producto"></h1>
       <p class="descripcion">
         These low-profile sneakers are your perfect casual wear companion. Featuring a
         durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
       <div class="info-precio">
         <div class="precio-desc">
-          <span class="precio">$125.00</span>
-          <span class="descuento">50%</span>
+          <span class="precio">$</span>
+          <span class="descuento"></span>
         </div>
-        <span class="precio-old">$250.00</span>
+        <span class="precio-old">$</span>
       </div>
       <div class="contador">
-        <a href="javascript:void(0);" onclick="previous()"><img src="images/icon-minus.svg" alt=""></a>
-        <span class="cantidad">0</span>
-        <a href="javascript:void(0);" onclick="next()"><img src="images/icon-plus.svg" alt=""></a>
+        <a href="javascript:void(0);" onclick="restar()"><img src="images/icon-minus.svg" alt=""></a>
+        <div class="cantidad-container">
+            <span class="cantidad"></span>
+        </div>
+        <a href="javascript:void(0);" onclick="sumar()"><img src="images/icon-plus.svg" alt=""></a>
       </div>
-      <a href="#" class="add-to-cart"><img src="images/cart-shopping-solid.svg" alt="">Add to cart</a>
+      <a href="#" class="add-to-cart" onclick="agregarAlCarro()"><img src="images/cart-shopping-solid.svg" alt="">Add to cart</a>
     </div>
   </main>
 
