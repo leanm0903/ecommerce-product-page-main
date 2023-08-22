@@ -1,6 +1,6 @@
 
 let slideIndex = 1;
-let actual = 0;
+let actual = 1;
 let activo = false;
 class producto {
   constructor(nombreProducto,precioReal, desc, precioDesc) {
@@ -11,11 +11,8 @@ class producto {
   }
 }
 const Sneakers = new producto("Fall Limited Edition Sneakers",250,50,125);
-// let valorProducto = 125;
-// let desc = 50;
-// let valorOld = 250;
 const contador = document.querySelector(".cantidad");
-contador.innerHTML=`<span class="cantidad">0</span>`;
+contador.innerHTML=`<span class="cantidad">1</span>`;
 const nombreProd = document.querySelector(".nombre-producto");
 nombreProd.innerHTML = Sneakers.nombreProducto;
 const precio = document.querySelector(".precio");
@@ -24,7 +21,12 @@ const descuento = document.querySelector(".descuento");
 descuento.innerHTML += Sneakers.desc + '%';
 const valorReal = document.querySelector(".precio-old");
 valorReal.innerHTML += Sneakers.precioReal;
-
+const tituloDesc = document.querySelector(".titulo-desc");
+const compras = document.querySelector(".compras");
+const prodInCart = document.querySelector("prod-in-cart");
+const precioCart = document.querySelector(".precio-cart");
+const precioTotal = document.querySelector(".total");
+const containerFoto = document.querySelector(".container-imagen-cart");
 //sideNav
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -58,8 +60,10 @@ const buttonCart = document.getElementById("cart-b");
 buttonCart.addEventListener('click',()=>{
   if(!activo){
     document.getElementById("carrito").style.zIndex =1;
+    document.getElementById("carrito").style.display = 'inline';
     activo=true;
   }else{
+    document.getElementById("carrito").style.display = 'none';
     document.getElementById("carrito").style.zIndex =0;
     activo=false
   }
@@ -77,10 +81,14 @@ function restar(){
   contador.innerHTML=`<span class="cantidad">${actual}</span>`
 }
 //ADDTOCART
-function agregarAlCarro(){
-  const tituloDesc = document.querySelector(".titulo-desc");
-  tituloDesc.innerHTML = Sneakers.nombreProducto;
-  const precioCart = document.querySelector(".precio-cart");
-  tituloDesc.innerHTML = Sneakers.precioDesc;
+  tituloDesc.innerHTML='Your cart is empty';
+function agregarAlCarro(){  
+  tituloDesc.innerHTML = Sneakers.nombreProducto; 
+  precioCart.innerHTML ='$'+ Sneakers.precioDesc + ` X ${actual} `; 
+  let tot= actual * Sneakers.precioDesc;
+  precioTotal.innerHTML = ` $${tot}`; 
+  containerFoto.innerHTML=(`<img src="images/image-product-1-thumbnail.jpg" alt="">`)
   console.log(actual);
+  // Aca solo estoy mostrando los datos deberia crear otro objeto o mandarlo el mismo objeto a otro lugar
 }
+

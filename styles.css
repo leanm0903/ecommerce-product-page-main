@@ -99,6 +99,7 @@ header{
 }
 /* CARRITO */
 .carrito{
+    display: none;
     position: absolute;
     z-index: 0;
     background-color: #fff;
@@ -112,14 +113,8 @@ header{
     padding: 2rem;
     border-bottom:  1px solid var(--grisAzulado);
 }
-.compras {
-    height: 70%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-.prod-in-cart {
-    display: flex;
+
+.prod-in-cart {display: flex;
     padding: 2rem;
     gap: 1.5rem;
 }
@@ -131,6 +126,11 @@ header{
     flex-wrap: wrap;
     font-size: 1.6rem;
     color: var(--grisAzuladoOscuro);
+}
+
+.total{
+    color: #000;
+    font-weight: 700;
 }
 /* FOTO */
 
