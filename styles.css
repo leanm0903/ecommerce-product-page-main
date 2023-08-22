@@ -114,12 +114,15 @@ header{
     border-bottom:  1px solid var(--grisAzulado);
 }
 
-.prod-in-cart {display: flex;
+.prod-in-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     gap: 1.5rem;
 }
 .prod-in-cart img{
-    height: 6rem;
+    height: 7rem;
 }
 .detalles{
     display: flex;
@@ -132,6 +135,11 @@ header{
     color: #000;
     font-weight: 700;
 }
+#buton-delete{
+    display: none;
+    height: 2rem;
+}
+
 /* FOTO */
 
 .info-producto-container{

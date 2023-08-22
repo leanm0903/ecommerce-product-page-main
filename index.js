@@ -27,6 +27,7 @@ const prodInCart = document.querySelector("prod-in-cart");
 const precioCart = document.querySelector(".precio-cart");
 const precioTotal = document.querySelector(".total");
 const containerFoto = document.querySelector(".container-imagen-cart");
+const butonDelete = document.getElementById("buton-delete");
 //sideNav
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -87,8 +88,18 @@ function agregarAlCarro(){
   precioCart.innerHTML ='$'+ Sneakers.precioDesc + ` X ${actual} `; 
   let tot= actual * Sneakers.precioDesc;
   precioTotal.innerHTML = ` $${tot}`; 
-  containerFoto.innerHTML=(`<img src="images/image-product-1-thumbnail.jpg" alt="">`)
+  containerFoto.innerHTML=(`<img class="img-carrito" src="images/image-product-1-thumbnail.jpg" alt="">`);
+  butonDelete.style.display = 'flex'
   console.log(actual);
   // Aca solo estoy mostrando los datos deberia crear otro objeto o mandarlo el mismo objeto a otro lugar
+}
+
+function borrarCarrito(){
+  tituloDesc.innerHTML = '';
+  precioTotal.innerHTML = '';
+  precioCart.innerHTML =''; 
+  containerFoto.innerHTML='';
+  tituloDesc.innerHTML='Your cart is empty';
+  butonDelete.style.display	= "none";
 }
 
